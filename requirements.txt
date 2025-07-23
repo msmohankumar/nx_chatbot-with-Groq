@@ -1,0 +1,11 @@
+streamlit
+langchain
+langchain-community
+langchain-groq
+# Or if you prefer OpenAI, uncomment the line below and comment out langchain-groq
+# langchain-openai
+python-dotenv
+faiss-cpu
+sentence-transformers
+pypdf
+beautifulsoup4
