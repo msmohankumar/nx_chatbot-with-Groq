@@ -1,0 +1,1065 @@
+﻿<!DOCTYPE html><html><head><meta charset="UTF-8"><style id="NXStyle" type="text/css">                      /* General body description */          body          {              background-color: rgb(240,240,240);              color: black;              font-size:   12px;              font-family:   'Arial', 'Trebuchet MS', 'Times New Roman', Helvetica, sans-serif;              border: 0px solid black;          }          h1          {              font-size: 1.2em;              margin-top: .2cm;              margin-bottom: .2cm;              font-weight: bold;          }          h2          {              font-size: 1.0em;              margin-top: .2cm;              margin-bottom: .2cm;              font-weight: bold;          }          h3          {              border-spacing: 0px;              margin-top: .25cm;              margin-bottom: .1cm;              font-size: 12px;              font-weight: bold;          }          h4          {              font-size: .8em;              margin-top: .2cm;              margin-bottom: .2cm;          }          img          {              vertical-align: bottom;          }          .NXtablePlain          {              width: 100%;              font-size: 12px;              text-align: left;              margin-top: 0px;              font-style: normal;              font-weight: normal;              border-spacing: 0px;              border-collapse: collapse;              border: 0px solid black;              vertical-align: top;          }          table.NXCellPlain          {              font-size: 12px;              text-align: left;              margin-top: 0px;              font-style: normal;              font-weight: normal;              border-spacing: 0px;              border-collapse: collapse;              border: 0px solid black;              vertical-align: top;          }          /* ========================================================================*/          /* Default NX table settings                                               */          /* ========================================================================*/          .NXtable          {              width: 100% ;              color: black;              font-size: 12px;              text-align: left;              margin-top: 5px;              font-style: normal;              font-weight: normal;              border-spacing: 0px;              border-collapse: collapse;              border: 1px solid rgb(220,220,220);              vertical-align: top;          }          #NXInfoHeader          {              border: 1px solid rgb(100,100,100);              margin-top: .5cm;          }          .NXtable th          {              padding: 2px;              background-color: rgb(240,240,240);          }          .NXtable td          {              padding: 2px;          }          .NXtable td#Column0          {              font-weight: bold;              width: 220px;              min-width: 220px;              max-width: 220px;          }          .NXtable th#Column0          {            font-weight: bold;            width: 220px;            min-width: 220px;            max-width: 220px;          }          /* Doubles are right aligned. */          #columndouble          {              text-align: right;              font-weight: normal;              border-width: 1px;              width: 220px;              border-spacing: 1px;              border-collapse: collapse;          }          /* Exp column width */          #expColumn0          {              width: 50%;          }                    td.light_background          {              background-color: rgb(255,255,255);          }          td.dark_background          {              background-color: rgb(50,50,50);          }          /* Apply fixed width for number column*/          td.NXNumberColumn, th.NXNumberColumn, td.NXNumberColumn#Column0          {              width: 2.5em;              min-width: 2.5em;          }          /* Apply fixed width for Date and time column*/          td.NXDateTimeColumn, th.NXDateTimeColumn, td.NXDateTimeColumn#Column0          {              width: 9em;              min-width: 9em;          }          /* ========================================================================*/          /* Internal Table Borders                                                  */          /* ========================================================================*/          .NXtable td, .NXtable th          {              border: 1px solid rgb(220,220,220);          }          .NXtable tr td,          .NXtable tr th          {          }          .NXtable tr:last-child td          {          }          .NXtable tr td:first-child,          .NXtable tr th:first-child          {          }          .NXtable tr td,          .NXtable tr th          {          }          .NXtable th          {          text-align: left;          }          /* Banding */          .NXtable tr:nth-child(even)          {              background: rgb(250,250,250)          }          .NXtable tr:nth-child(odd)          {              background: rgb(255,255,255)          }          /* Prevent banding on plain table */          .NXtablePlain tr:nth-child(odd)          {              background: rgb(255,255,255)          }          /* ========================================================================*/          /* Paragraph                                                               */          /* ========================================================================*/          .NXParagraph          {              font-family: Arial, 'Times New Roman', 'Trebuchet MS', Helvetica, sans-serif;              font-size: 12px;          }          /* ========================================================================*/          /* The header table located at the top of the information window           */          /* ========================================================================*/          .NXtable#introTable table          {              vertical-align: bottom;              text-align: left;              font-style: normal;              font-weight: bold;              font-size: 12px;              border-spacing: 0px;              border-width: 0px;          }          .NXtable#introTable td#Column0          {              font-weight: bold;              width:  20em;          }          .NXtable#introTable th#Column0          {            font-weight: bold;            width:  20em;          }          .NXtable#introTable td          {              border: 0px;          }          .NXtable#introTable th          {              border: 0px;              text-align: left;          }          div          {              clear: both;          }          pre          {              font-size: 13px;              color: black;              font-family: Lucinda Console,Consolas,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace;              white-space: pre-wrap;              margin: 0px;              margin-top: 5px;              padding: 4px;              border-top: 1px solid rgb(220,220,220);              border-bottom: 1px solid rgb(220,220,220);              background-color: rgb(255,255,255);          }          /* ========================================================================*/          /* Collapsible Groups                                                      */          /* ========================================================================*/          /* General NXGroupHeader definition */          .NXGroupHeader h2          {              padding: 4px;              text-align: left;              font-size: 14px;              font-weight: normal;              color: rgb(0,100,135);              background-color: rgb(255,255,255);              cursor: pointer;              margin-top: .25cm;              margin-bottom: 0cm;          }          /* NXGroupHeader border definitons */          .NXGroupHeader_ExpandedOdd h2          {              border-top: 1px solid rgb(220,220,220);              border-left: 1px solid rgb(220,220,220);              border-right: 1px solid rgb(220,220,220);          }          .NXGroupHeader_ExpandedEven h2          {              border-top: 1px solid rgb(220,220,220);              border-left: 1px solid rgb(220,220,220);              border-right: 1px solid rgb(220,220,220);          }          .NXGroupHeader_CollapsedOdd h2          {              border: 1px solid rgb(220,220,220);          }          .NXGroupHeader_CollapsedEven h2          {              border: 1px solid rgb(220,220,220);          }          /* NXGroupHeader expanded and collapsed icons and background */          .NXGroupHeader_ExpandedEven h2          {              background: rgb(240,240,240) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAmklEQVR4nO2SsQoCMRBEJzktDwvt/AL9Ahs/P1+RIikSSBEuEJTTu2zWwkYOrpATBHFgm2H2sbAjmBlLJBdt/wGfAaymxu5UeN1ecRl79OUGUQkNFTRUwP0W++G80Vrn2QuoEu40YqABgitkfU5DBMmMlNLhNS+mRVJKtTHGo7UWxhg45+C9RwgBXdch5+yZ2c0C3tX3v/ADgAcHZFHeo58aBQAAAABJRU5ErkJggg==) right top no-repeat;          }          .NXGroupHeader_ExpandedEven h2:hover          {              background: rgb(175,215,225) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAmklEQVR4nO2SsQoCMRBEJzktDwvt/AL9Ahs/P1+RIikSSBEuEJTTu2zWwkYOrpATBHFgm2H2sbAjmBlLJBdt/wGfAaymxu5UeN1ecRl79OUGUQkNFTRUwP0W++G80Vrn2QuoEu40YqABgitkfU5DBMmMlNLhNS+mRVJKtTHGo7UWxhg45+C9RwgBXdch5+yZ2c0C3tX3v/ADgAcHZFHeo58aBQAAAABJRU5ErkJggg==) right top no-repeat;          }          .NXGroupHeader_CollapsedEven h2          {              background: rgb(240,240,240) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA9UlEQVR4nM2TMWrDQBBF/1oOsUgkg+NUbtQmVQgGpcgpjM/gW7jJVXKAHCAXSBlIuSq3EIQVSLKdjbQ741o2a4hdOAPT/f/4w2cEM+OU6Z3k/v+A2yfHo7ThLMviowAX0RrBdY08z++OAtTtGnW7gZTSqxG7NY7ShoNohU37AzP4hiCHfh0hsBZsbjD5fR5KKStvAkcOjWvRkIVwFoG1EETokYNghjGmc05/F/C6fI/LsrxXSuHlbfYhmDANF3OttdJaQ1eV6hiY2btXj18cPXxykiSpT7OXoAM3YxATiqI4IDqQAMBlGIYTALFPs9fCX+f8v7AFNxu42fSwh50AAAAASUVORK5CYII= ) right top no-repeat;          }          .NXGroupHeader_CollapsedEven h2:hover          {              background: rgb(175,215,225) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA9UlEQVR4nM2TMWrDQBBF/1oOsUgkg+NUbtQmVQgGpcgpjM/gW7jJVXKAHCAXSBlIuSq3EIQVSLKdjbQ741o2a4hdOAPT/f/4w2cEM+OU6Z3k/v+A2yfHo7ThLMviowAX0RrBdY08z++OAtTtGnW7gZTSqxG7NY7ShoNohU37AzP4hiCHfh0hsBZsbjD5fR5KKStvAkcOjWvRkIVwFoG1EETokYNghjGmc05/F/C6fI/LsrxXSuHlbfYhmDANF3OttdJaQ1eV6hiY2btXj18cPXxykiSpT7OXoAM3YxATiqI4IDqQAMBlGIYTALFPs9fCX+f8v7AFNxu42fSwh50AAAAASUVORK5CYII= ) right top no-repeat;          }          .NXGroupHeader_ExpandedOdd h2          {              background: rgb(255,255,255) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAmklEQVR4nO2SsQoCMRBEJzktDwvt/AL9Ahs/P1+RIikSSBEuEJTTu2zWwkYOrpATBHFgm2H2sbAjmBlLJBdt/wGfAaymxu5UeN1ecRl79OUGUQkNFTRUwP0W++G80Vrn2QuoEu40YqABgitkfU5DBMmMlNLhNS+mRVJKtTHGo7UWxhg45+C9RwgBXdch5+yZ2c0C3tX3v/ADgAcHZFHeo58aBQAAAABJRU5ErkJggg==) right top no-repeat;          }          .NXGroupHeader_ExpandedOdd h2:hover          {              background: rgb(175,215,225) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAmklEQVR4nO2SsQoCMRBEJzktDwvt/AL9Ahs/P1+RIikSSBEuEJTTu2zWwkYOrpATBHFgm2H2sbAjmBlLJBdt/wGfAaymxu5UeN1ecRl79OUGUQkNFTRUwP0W++G80Vrn2QuoEu40YqABgitkfU5DBMmMlNLhNS+mRVJKtTHGo7UWxhg45+C9RwgBXdch5+yZ2c0C3tX3v/ADgAcHZFHeo58aBQAAAABJRU5ErkJggg==) right top no-repeat;          }          .NXGroupHeader_CollapsedOdd h2          {              background: rgb(255,255,255) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA9UlEQVR4nM2TMWrDQBBF/1oOsUgkg+NUbtQmVQgGpcgpjM/gW7jJVXKAHCAXSBlIuSq3EIQVSLKdjbQ741o2a4hdOAPT/f/4w2cEM+OU6Z3k/v+A2yfHo7ThLMviowAX0RrBdY08z++OAtTtGnW7gZTSqxG7NY7ShoNohU37AzP4hiCHfh0hsBZsbjD5fR5KKStvAkcOjWvRkIVwFoG1EETokYNghjGmc05/F/C6fI/LsrxXSuHlbfYhmDANF3OttdJaQ1eV6hiY2btXj18cPXxykiSpT7OXoAM3YxATiqI4IDqQAMBlGIYTALFPs9fCX+f8v7AFNxu42fSwh50AAAAASUVORK5CYII= ) right top no-repeat;          }          .NXGroupHeader_CollapsedOdd h2:hover          {              background: rgb(175,215,225) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA9UlEQVR4nM2TMWrDQBBF/1oOsUgkg+NUbtQmVQgGpcgpjM/gW7jJVXKAHCAXSBlIuSq3EIQVSLKdjbQ741o2a4hdOAPT/f/4w2cEM+OU6Z3k/v+A2yfHo7ThLMviowAX0RrBdY08z++OAtTtGnW7gZTSqxG7NY7ShoNohU37AzP4hiCHfh0hsBZsbjD5fR5KKStvAkcOjWvRkIVwFoG1EETokYNghjGmc05/F/C6fI/LsrxXSuHlbfYhmDANF3OttdJaQ1eV6hiY2btXj18cPXxykiSpT7OXoAM3YxATiqI4IDqQAMBlGIYTALFPs9fCX+f8v7AFNxu42fSwh50AAAAASUVORK5CYII= ) right top no-repeat;          }          /* NXGroupBody definitions */          div .NXGroupBody_ExpandedEven          {              padding: 6px;              border-bottom: 1px solid rgb(220,220,220);              border-left: 1px solid rgb(220,220,220);              border-right: 1px solid rgb(220,220,220);              background-color: rgb(240,240,240);          }          div .NXGroupBody_ExpandedOdd          {              padding: 6px;              border-bottom: 1px solid rgb(220,220,220);              border-left: 1px solid rgb(220,220,220);              border-right: 1px solid rgb(220,220,220);              background-color: rgb(255,255,255);          }          /* ========================================================================*/          /* All string api where the data comes in as a single line.  Old stuff     */          /* ========================================================================*/          .SimpleLine          {          }          /* ========================================================================*/          /* Attention levels    */          /* ========================================================================*/                    .bold {              font-weight: bold;          }          .attentionLevel3 {              color: blue;          }                    /* ========================================================================*/          /* Matrix table settings                                               */          /* ========================================================================*/          .matrixContainer          {              display: flex;              flex-direction: row;              flex-wrap: wrap;              position: relative;          }                    .matrixContainer h3          {            flex: 0 0 100%;          }                    .units          {            flex-grow: 1;            margin-left: 20px;            margin-bottom: 5px;            position: absolute;            bottom: 0;          }                    .NXtable.mathMatrix          {              width: 120px;              color: black;              font-size: 12px;              text-align: center;              margin-top: 5px;              font-style: normal;              font-weight: normal;              border-spacing: 0px;              border-collapse: collapse;              border: 0px white;              vertical-align: top;              position: relative;              left: 5px;              flex-grow: 1;          }          /* Create Brackets */          .mathMatrix:before, .mathMatrix:after          {              content: '';              position: absolute;              top: 0;              border: 1px solid #000;              width: 5px;              height: 100%;          }          .mathMatrix:before {              left: -5px;              border-right: 0;          }          .mathMatrix:after {              right: -5px;              border-left: 0;          }          .NXtable.mathMatrix th          {              padding: 5px;              background-color: white;          }          .NXtable.mathMatrix td          {              padding: 5px;              width: 30px;              vertical-align: initial;          }          .NXtable.mathMatrix td#Column0          {              font-weight: normal;              padding: 3px;              width: 30px;              min-width: inherit;              max-width: inherit;          }          .NXtable.mathMatrix th#Column0          {            font-weight: normal;            padding: 3px;            width: 30px;            min-width: inherit;            max-width: inherit;          }          .NXtable.mathMatrix td, .NXtable.mathMatrix th          {              border: 0px solid rgb(220,220,220);          }          /* Banding */          .NXtable.mathMatrix tr:nth-child(even)          {              background: white;          }          .NXtable.mathMatrix tr:nth-child(odd)          {              background: white;          }                </style><style id="NXStylePreNoWrap" type="text/css">pre.NoWrapText{    white-space: pre;    word-wrap: normal;    float: left;}</style><script>function toggleExpandCollapse(p, e) {   var header = null;   var body = null;   for (var i = 0; i < p.childNodes.length; i++) {      if (hasClass(p.childNodes[i], 'NXGroupHeader'))       {           header = p.childNodes[i];           break;       }   }   for (var i = 0; i < p.childNodes.length; i++) {       if (hasClass(p.childNodes[i], 'NXGroupBody')) {           body = p.childNodes[i];           break;       }   }   if (hasClass(p, 'NXExpanded'))   {       replaceClass(p, 'NXExpanded', 'NXCollapsed');       if (header != null)           header.className = header.className.replace('Expanded', 'Collapsed');       if (body != null)       {           body.className = body.className.replace('Expanded', 'Collapsed');           body.style.display = 'none';       }   }   else if (hasClass(p, 'NXCollapsed'))   {       replaceClass(p, 'NXCollapsed', 'NXExpanded');       if (header != null)           header.className = header.className.replace('Collapsed', 'Expanded');       if (body != null)       {           body.className = body.className.replace('Collapsed', 'Expanded');           body.style.display = 'block';       }   }   if (e != null)   {       e.cancelBubble = true;       if (e.stopPropagation) {           e.stopPropagation();       }       else {           e.returnValue = false;       }       if (!hasClass(p, 'NXExpandModified'))           p.className = p.className + ' NXExpandModified'   }}function hasClass(element, cls){    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;}function replaceClass(element, cls, rep){    var re = new RegExp(cls, 'g');    element.className = element.className.replace(re, rep);}function collapseAllGroups(collapsed, append){    var collapsibleGroups;    if (collapsed)    {       collapsibleGroups = [].slice.apply(getElementsByClassName(document, "NXExpanded"));    }    else    {       collapsibleGroups = [].slice.apply(getElementsByClassName(document, "NXCollapsed"));    }    var arrayLength = collapsibleGroups.length;    for (var i = 0; i < arrayLength; i++)    {       if (!append || !hasClass(collapsibleGroups[i], 'NXExpandModified'))           toggleExpandCollapse(collapsibleGroups[i], null);    }}function getElementsByClassName(node, classname){    var a = [];    var re = new RegExp('(^| )' + classname + '( |$)');    var els = node.getElementsByTagName("*");    for (var i = 0, j = els.length; i < j; i++)        if (re.test(els[i].className))a.push(els[i]);    return a;}</script></head><body id="NXBody" contenteditable="true"><header></header><pre class="NoWrapText">--- Comprehensive Feature Analysis Report for Part: temp_nx_part ---
+This report includes feature details, class members (for scripting), and attributes.
+
+======================================================================
+Feature Name:    Datum Coordinate System(0)
+Namespace:       NXOpen.Features
+Class:           DatumCsys
+Feature Type:    DATUM_CSYS
+----------------------------------------------------------------------
+Available Class Members (Properties &amp; Methods for scripting with 'DatumCsys'):
+  - AlgorithmVersion: 2097149
+  - AttributeInformation: &lt;class 'NXOpen.NXObjectAttributeInformation_Struct'&gt;
+  - AttributeType: &lt;class 'NXOpen.NXObjectAttributeType'&gt;
+  - BooleanType: &lt;class 'NXOpen.Features.FeatureBooleanType'&gt;
+  - BreakWaveLink: &lt;built-in method BreakWaveLink of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - ChangeBooleanType: &lt;built-in method ChangeBooleanType of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - CloneCsys: &lt;built-in method CloneCsys of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - ComputationalTime: &lt;class 'NXOpen.NXObjectComputationalTime_Struct'&gt;
+  - ContainerFeature: None
+  - CreateAttributeIterator: &lt;built-in method CreateAttributeIterator of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - DateAndTimeFormat: &lt;class 'NXOpen.NXObjectDateAndTimeFormat'&gt;
+  - DeleteAllAttributesByType: &lt;built-in method DeleteAllAttributesByType of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - DeleteAttributeByTypeAndTitle: &lt;built-in method DeleteAttributeByTypeAndTitle of NXOpen.Features.DatumCsys object at 0x0000027B8
+02A65D0&gt;
+  - DeleteClueAlerts: &lt;built-in method DeleteClueAlerts of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - DeleteHintAlerts: &lt;built-in method DeleteHintAlerts of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - DeleteInformationalAlerts: &lt;built-in method DeleteInformationalAlerts of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - DeleteUserAttribute: &lt;built-in method DeleteUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - DeleteUserAttributes: &lt;built-in method DeleteUserAttributes of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - DeleteWarningAlerts: &lt;built-in method DeleteWarningAlerts of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - DiagnosticType: &lt;class 'NXOpen.Features.FeatureDiagnosticType'&gt;
+  - FeatureType: DATUM_CSYS
+  - FindObject: &lt;built-in method FindObject of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GenerateFeatureSelectionData: &lt;built-in method GenerateFeatureSelectionData of NXOpen.Features.DatumCsys object at 0x0000027B802
+A65D0&gt;
+  - GenerateFeatureSelectionDataString: &lt;built-in method GenerateFeatureSelectionDataString of NXOpen.Features.DatumCsys object at 0
+x0000027B802A65D0&gt;
+  - GetAllChildren: &lt;built-in method GetAllChildren of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetAttributeTitlesByType: &lt;built-in method GetAttributeTitlesByType of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetBodies: &lt;built-in method GetBodies of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetBooleanUserAttribute: &lt;built-in method GetBooleanUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetChildren: &lt;built-in method GetChildren of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetComputationalTimeUserAttribute: &lt;built-in method GetComputationalTimeUserAttribute of NXOpen.Features.DatumCsys object at 0x0
+000027B802A65D0&gt;
+  - GetEdges: &lt;built-in method GetEdges of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetEntities: &lt;built-in method GetEntities of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetExpressions: &lt;built-in method GetExpressions of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetFaces: &lt;built-in method GetFaces of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetFeatureClueHintMessages: &lt;built-in method GetFeatureClueHintMessages of NXOpen.Features.DatumCsys object at 0x0000027B802A65D
+0&gt;
+  - GetFeatureClueMessages: &lt;built-in method GetFeatureClueMessages of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetFeatureColor: &lt;built-in method GetFeatureColor of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetFeatureErrorMessages: &lt;built-in method GetFeatureErrorMessages of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetFeatureHintMessages: &lt;built-in method GetFeatureHintMessages of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetFeatureInformationalMessages: &lt;built-in method GetFeatureInformationalMessages of NXOpen.Features.DatumCsys object at 0x00000
+27B802A65D0&gt;
+  - GetFeatureName: &lt;built-in method GetFeatureName of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetFeatureWarningMessages: &lt;built-in method GetFeatureWarningMessages of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetIntegerAttribute: &lt;built-in method GetIntegerAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetIntegerUserAttribute: &lt;built-in method GetIntegerUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetNextUserAttribute: &lt;built-in method GetNextUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetParents: &lt;built-in method GetParents of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetPdmReferenceAttributeValue: &lt;built-in method GetPdmReferenceAttributeValue of NXOpen.Features.DatumCsys object at 0x0000027B8
+02A65D0&gt;
+  - GetRealAttribute: &lt;built-in method GetRealAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetRealUserAttribute: &lt;built-in method GetRealUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetReferenceAttribute: &lt;built-in method GetReferenceAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetSections: &lt;built-in method GetSections of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetStringAttribute: &lt;built-in method GetStringAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetStringUserAttribute: &lt;built-in method GetStringUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetTimeAttribute: &lt;built-in method GetTimeAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetTimeUserAttribute: &lt;built-in method GetTimeUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetUserAttribute: &lt;built-in method GetUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetUserAttributeAsString: &lt;built-in method GetUserAttributeAsString of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetUserAttributeCount: &lt;built-in method GetUserAttributeCount of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetUserAttributeLock: &lt;built-in method GetUserAttributeLock of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetUserAttributeSize: &lt;built-in method GetUserAttributeSize of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetUserAttributeSourceObjects: &lt;built-in method GetUserAttributeSourceObjects of NXOpen.Features.DatumCsys object at 0x0000027B8
+02A65D0&gt;
+  - GetUserAttributes: &lt;built-in method GetUserAttributes of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - GetUserAttributesAsStrings: &lt;built-in method GetUserAttributesAsStrings of NXOpen.Features.DatumCsys object at 0x0000027B802A65D
+0&gt;
+  - HasUserAttribute: &lt;built-in method HasUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - HideBody: &lt;built-in method HideBody of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - HideParents: &lt;built-in method HideParents of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - Highlight: &lt;built-in method Highlight of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - IsBrowsableFeature: &lt;built-in method IsBrowsableFeature of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - IsContainedFeature: False
+  - IsInternal: False
+  - IsOccurrence: False
+  - JournalIdentifier: DATUM_CSYS(0)
+  - LoadParentPart: &lt;built-in method LoadParentPart of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - Location: [X=0,Y=0,Z=0]
+  - LogDiagnostic: &lt;built-in method LogDiagnostic of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - MakeCurrentFeature: &lt;built-in method MakeCurrentFeature of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - MakeSketchExternal: &lt;built-in method MakeSketchExternal of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - MakeSketchInternal: &lt;built-in method MakeSketchInternal of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - Name: 
+  - Null: &lt;NXOpen.Features.DatumCsys object at 0x0000027B81ACC420&gt;
+  - OwningComponent: None
+  - OwningPart: &lt;NXOpen.Part object at 0x0000027BB02F92F0&gt;
+  - Print: &lt;built-in method Print of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - Prototype: None
+  - RemoveForEdit: &lt;built-in method RemoveForEdit of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - RemoveParameters: &lt;built-in method RemoveParameters of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - SetAttribute: &lt;built-in method SetAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - SetBooleanUserAttribute: &lt;built-in method SetBooleanUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - SetGroupActive: &lt;built-in method SetGroupActive of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - SetName: &lt;built-in method SetName of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - SetPdmReferenceAttribute: &lt;built-in method SetPdmReferenceAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - SetReferenceAttribute: &lt;built-in method SetReferenceAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - SetTimeAttribute: &lt;built-in method SetTimeAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - SetTimeUserAttribute: &lt;built-in method SetTimeUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - SetUserAttribute: &lt;built-in method SetUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - SetUserAttributeLock: &lt;built-in method SetUserAttributeLock of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - SetWcsAtCsys: &lt;built-in method SetWcsAtCsys of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - ShowBody: &lt;built-in method ShowBody of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - ShowDimensions: &lt;built-in method ShowDimensions of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - ShowParents: &lt;built-in method ShowParents of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - Suppress: &lt;built-in method Suppress of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - Suppressed: False
+  - Tag: 56108
+  - Timestamp: 0
+  - Unhighlight: &lt;built-in method Unhighlight of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+  - Unsuppress: &lt;built-in method Unsuppress of NXOpen.Features.DatumCsys object at 0x0000027B802A65D0&gt;
+----------------------------------------------------------------------
+User Attributes on this Feature:
+
+======================================================================
+Feature Name:    Datum Coordinate System(1)
+Namespace:       NXOpen.Features
+Class:           DatumCsys
+Feature Type:    DATUM_CSYS
+----------------------------------------------------------------------
+Available Class Members (Properties &amp; Methods for scripting with 'DatumCsys'):
+  - AlgorithmVersion: 2097149
+  - AttributeInformation: &lt;class 'NXOpen.NXObjectAttributeInformation_Struct'&gt;
+  - AttributeType: &lt;class 'NXOpen.NXObjectAttributeType'&gt;
+  - BooleanType: &lt;class 'NXOpen.Features.FeatureBooleanType'&gt;
+  - BreakWaveLink: &lt;built-in method BreakWaveLink of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - ChangeBooleanType: &lt;built-in method ChangeBooleanType of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - CloneCsys: &lt;built-in method CloneCsys of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - ComputationalTime: &lt;class 'NXOpen.NXObjectComputationalTime_Struct'&gt;
+  - ContainerFeature: None
+  - CreateAttributeIterator: &lt;built-in method CreateAttributeIterator of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - DateAndTimeFormat: &lt;class 'NXOpen.NXObjectDateAndTimeFormat'&gt;
+  - DeleteAllAttributesByType: &lt;built-in method DeleteAllAttributesByType of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - DeleteAttributeByTypeAndTitle: &lt;built-in method DeleteAttributeByTypeAndTitle of NXOpen.Features.DatumCsys object at 0x0000027B8
+324F180&gt;
+  - DeleteClueAlerts: &lt;built-in method DeleteClueAlerts of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - DeleteHintAlerts: &lt;built-in method DeleteHintAlerts of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - DeleteInformationalAlerts: &lt;built-in method DeleteInformationalAlerts of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - DeleteUserAttribute: &lt;built-in method DeleteUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - DeleteUserAttributes: &lt;built-in method DeleteUserAttributes of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - DeleteWarningAlerts: &lt;built-in method DeleteWarningAlerts of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - DiagnosticType: &lt;class 'NXOpen.Features.FeatureDiagnosticType'&gt;
+  - FeatureType: DATUM_CSYS
+  - FindObject: &lt;built-in method FindObject of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GenerateFeatureSelectionData: &lt;built-in method GenerateFeatureSelectionData of NXOpen.Features.DatumCsys object at 0x0000027B832
+4F180&gt;
+  - GenerateFeatureSelectionDataString: &lt;built-in method GenerateFeatureSelectionDataString of NXOpen.Features.DatumCsys object at 0
+x0000027B8324F180&gt;
+  - GetAllChildren: &lt;built-in method GetAllChildren of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetAttributeTitlesByType: &lt;built-in method GetAttributeTitlesByType of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetBodies: &lt;built-in method GetBodies of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetBooleanUserAttribute: &lt;built-in method GetBooleanUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetChildren: &lt;built-in method GetChildren of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetComputationalTimeUserAttribute: &lt;built-in method GetComputationalTimeUserAttribute of NXOpen.Features.DatumCsys object at 0x0
+000027B8324F180&gt;
+  - GetEdges: &lt;built-in method GetEdges of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetEntities: &lt;built-in method GetEntities of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetExpressions: &lt;built-in method GetExpressions of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetFaces: &lt;built-in method GetFaces of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetFeatureClueHintMessages: &lt;built-in method GetFeatureClueHintMessages of NXOpen.Features.DatumCsys object at 0x0000027B8324F18
+0&gt;
+  - GetFeatureClueMessages: &lt;built-in method GetFeatureClueMessages of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetFeatureColor: &lt;built-in method GetFeatureColor of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetFeatureErrorMessages: &lt;built-in method GetFeatureErrorMessages of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetFeatureHintMessages: &lt;built-in method GetFeatureHintMessages of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetFeatureInformationalMessages: &lt;built-in method GetFeatureInformationalMessages of NXOpen.Features.DatumCsys object at 0x00000
+27B8324F180&gt;
+  - GetFeatureName: &lt;built-in method GetFeatureName of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetFeatureWarningMessages: &lt;built-in method GetFeatureWarningMessages of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetIntegerAttribute: &lt;built-in method GetIntegerAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetIntegerUserAttribute: &lt;built-in method GetIntegerUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetNextUserAttribute: &lt;built-in method GetNextUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetParents: &lt;built-in method GetParents of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetPdmReferenceAttributeValue: &lt;built-in method GetPdmReferenceAttributeValue of NXOpen.Features.DatumCsys object at 0x0000027B8
+324F180&gt;
+  - GetRealAttribute: &lt;built-in method GetRealAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetRealUserAttribute: &lt;built-in method GetRealUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetReferenceAttribute: &lt;built-in method GetReferenceAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetSections: &lt;built-in method GetSections of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetStringAttribute: &lt;built-in method GetStringAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetStringUserAttribute: &lt;built-in method GetStringUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetTimeAttribute: &lt;built-in method GetTimeAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetTimeUserAttribute: &lt;built-in method GetTimeUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetUserAttribute: &lt;built-in method GetUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetUserAttributeAsString: &lt;built-in method GetUserAttributeAsString of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetUserAttributeCount: &lt;built-in method GetUserAttributeCount of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetUserAttributeLock: &lt;built-in method GetUserAttributeLock of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetUserAttributeSize: &lt;built-in method GetUserAttributeSize of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetUserAttributeSourceObjects: &lt;built-in method GetUserAttributeSourceObjects of NXOpen.Features.DatumCsys object at 0x0000027B8
+324F180&gt;
+  - GetUserAttributes: &lt;built-in method GetUserAttributes of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - GetUserAttributesAsStrings: &lt;built-in method GetUserAttributesAsStrings of NXOpen.Features.DatumCsys object at 0x0000027B8324F18
+0&gt;
+  - HasUserAttribute: &lt;built-in method HasUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - HideBody: &lt;built-in method HideBody of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - HideParents: &lt;built-in method HideParents of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - Highlight: &lt;built-in method Highlight of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - IsBrowsableFeature: &lt;built-in method IsBrowsableFeature of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - IsContainedFeature: False
+  - IsInternal: True
+  - IsOccurrence: False
+  - JournalIdentifier: EXTRUDE(1:1B:1B)
+  - LoadParentPart: &lt;built-in method LoadParentPart of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - Location: [X=0,Y=0,Z=0]
+  - LogDiagnostic: &lt;built-in method LogDiagnostic of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - MakeCurrentFeature: &lt;built-in method MakeCurrentFeature of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - MakeSketchExternal: &lt;built-in method MakeSketchExternal of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - MakeSketchInternal: &lt;built-in method MakeSketchInternal of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - Name: 
+  - Null: &lt;NXOpen.Features.DatumCsys object at 0x0000027B81ACC420&gt;
+  - OwningComponent: None
+  - OwningPart: &lt;NXOpen.Part object at 0x0000027BB02F92F0&gt;
+  - Print: &lt;built-in method Print of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - Prototype: None
+  - RemoveForEdit: &lt;built-in method RemoveForEdit of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - RemoveParameters: &lt;built-in method RemoveParameters of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - SetAttribute: &lt;built-in method SetAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - SetBooleanUserAttribute: &lt;built-in method SetBooleanUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - SetGroupActive: &lt;built-in method SetGroupActive of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - SetName: &lt;built-in method SetName of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - SetPdmReferenceAttribute: &lt;built-in method SetPdmReferenceAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - SetReferenceAttribute: &lt;built-in method SetReferenceAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - SetTimeAttribute: &lt;built-in method SetTimeAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - SetTimeUserAttribute: &lt;built-in method SetTimeUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - SetUserAttribute: &lt;built-in method SetUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - SetUserAttributeLock: &lt;built-in method SetUserAttributeLock of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - SetWcsAtCsys: &lt;built-in method SetWcsAtCsys of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - ShowBody: &lt;built-in method ShowBody of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - ShowDimensions: &lt;built-in method ShowDimensions of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - ShowParents: &lt;built-in method ShowParents of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - Suppress: &lt;built-in method Suppress of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - Suppressed: False
+  - Tag: 56923
+  - Timestamp: 1
+  - Unhighlight: &lt;built-in method Unhighlight of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+  - Unsuppress: &lt;built-in method Unsuppress of NXOpen.Features.DatumCsys object at 0x0000027B8324F180&gt;
+----------------------------------------------------------------------
+User Attributes on this Feature:
+
+======================================================================
+Feature Name:    SKETCH_000:Sketch(1)
+Namespace:       NXOpen.Features
+Class:           SketchFeature
+Feature Type:    SKETCH
+----------------------------------------------------------------------
+Available Class Members (Properties &amp; Methods for scripting with 'SketchFeature'):
+  - AlgorithmVersion: 2097149
+  - AttributeInformation: &lt;class 'NXOpen.NXObjectAttributeInformation_Struct'&gt;
+  - AttributeType: &lt;class 'NXOpen.NXObjectAttributeType'&gt;
+  - BooleanType: &lt;class 'NXOpen.Features.FeatureBooleanType'&gt;
+  - BreakWaveLink: &lt;built-in method BreakWaveLink of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - ChangeBooleanType: &lt;built-in method ChangeBooleanType of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - ComputationalTime: &lt;class 'NXOpen.NXObjectComputationalTime_Struct'&gt;
+  - ContainerFeature: None
+  - CreateAttributeIterator: &lt;built-in method CreateAttributeIterator of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - DateAndTimeFormat: &lt;class 'NXOpen.NXObjectDateAndTimeFormat'&gt;
+  - DeleteAllAttributesByType: &lt;built-in method DeleteAllAttributesByType of NXOpen.Features.SketchFeature object at 0x0000027B8191B
+DB0&gt;
+  - DeleteAttributeByTypeAndTitle: &lt;built-in method DeleteAttributeByTypeAndTitle of NXOpen.Features.SketchFeature object at 0x00000
+27B8191BDB0&gt;
+  - DeleteClueAlerts: &lt;built-in method DeleteClueAlerts of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - DeleteHintAlerts: &lt;built-in method DeleteHintAlerts of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - DeleteInformationalAlerts: &lt;built-in method DeleteInformationalAlerts of NXOpen.Features.SketchFeature object at 0x0000027B8191B
+DB0&gt;
+  - DeleteUserAttribute: &lt;built-in method DeleteUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - DeleteUserAttributes: &lt;built-in method DeleteUserAttributes of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - DeleteWarningAlerts: &lt;built-in method DeleteWarningAlerts of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - DiagnosticType: &lt;class 'NXOpen.Features.FeatureDiagnosticType'&gt;
+  - FeatureType: SKETCH
+  - FindObject: &lt;built-in method FindObject of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GenerateFeatureSelectionData: &lt;built-in method GenerateFeatureSelectionData of NXOpen.Features.SketchFeature object at 0x0000027
+B8191BDB0&gt;
+  - GenerateFeatureSelectionDataString: &lt;built-in method GenerateFeatureSelectionDataString of NXOpen.Features.SketchFeature object 
+at 0x0000027B8191BDB0&gt;
+  - GetAllChildren: &lt;built-in method GetAllChildren of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetAttributeTitlesByType: &lt;built-in method GetAttributeTitlesByType of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB
+0&gt;
+  - GetBodies: &lt;built-in method GetBodies of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetBooleanUserAttribute: &lt;built-in method GetBooleanUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetChildren: &lt;built-in method GetChildren of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetComputationalTimeUserAttribute: &lt;built-in method GetComputationalTimeUserAttribute of NXOpen.Features.SketchFeature object at
+ 0x0000027B8191BDB0&gt;
+  - GetEdges: &lt;built-in method GetEdges of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetEntities: &lt;built-in method GetEntities of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetExpressions: &lt;built-in method GetExpressions of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetFaces: &lt;built-in method GetFaces of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetFeatureClueHintMessages: &lt;built-in method GetFeatureClueHintMessages of NXOpen.Features.SketchFeature object at 0x0000027B819
+1BDB0&gt;
+  - GetFeatureClueMessages: &lt;built-in method GetFeatureClueMessages of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetFeatureColor: &lt;built-in method GetFeatureColor of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetFeatureErrorMessages: &lt;built-in method GetFeatureErrorMessages of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetFeatureHintMessages: &lt;built-in method GetFeatureHintMessages of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetFeatureInformationalMessages: &lt;built-in method GetFeatureInformationalMessages of NXOpen.Features.SketchFeature object at 0x0
+000027B8191BDB0&gt;
+  - GetFeatureName: &lt;built-in method GetFeatureName of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetFeatureWarningMessages: &lt;built-in method GetFeatureWarningMessages of NXOpen.Features.SketchFeature object at 0x0000027B8191B
+DB0&gt;
+  - GetIntegerAttribute: &lt;built-in method GetIntegerAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetIntegerUserAttribute: &lt;built-in method GetIntegerUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetNextUserAttribute: &lt;built-in method GetNextUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetParents: &lt;built-in method GetParents of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetPdmReferenceAttributeValue: &lt;built-in method GetPdmReferenceAttributeValue of NXOpen.Features.SketchFeature object at 0x00000
+27B8191BDB0&gt;
+  - GetRealAttribute: &lt;built-in method GetRealAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetRealUserAttribute: &lt;built-in method GetRealUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetReferenceAttribute: &lt;built-in method GetReferenceAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetSections: &lt;built-in method GetSections of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetStringAttribute: &lt;built-in method GetStringAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetStringUserAttribute: &lt;built-in method GetStringUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetTimeAttribute: &lt;built-in method GetTimeAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetTimeUserAttribute: &lt;built-in method GetTimeUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetUserAttribute: &lt;built-in method GetUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetUserAttributeAsString: &lt;built-in method GetUserAttributeAsString of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB
+0&gt;
+  - GetUserAttributeCount: &lt;built-in method GetUserAttributeCount of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetUserAttributeLock: &lt;built-in method GetUserAttributeLock of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetUserAttributeSize: &lt;built-in method GetUserAttributeSize of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetUserAttributeSourceObjects: &lt;built-in method GetUserAttributeSourceObjects of NXOpen.Features.SketchFeature object at 0x00000
+27B8191BDB0&gt;
+  - GetUserAttributes: &lt;built-in method GetUserAttributes of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - GetUserAttributesAsStrings: &lt;built-in method GetUserAttributesAsStrings of NXOpen.Features.SketchFeature object at 0x0000027B819
+1BDB0&gt;
+  - HasUserAttribute: &lt;built-in method HasUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - HideBody: &lt;built-in method HideBody of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - HideParents: &lt;built-in method HideParents of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - Highlight: &lt;built-in method Highlight of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - IsBrowsableFeature: &lt;built-in method IsBrowsableFeature of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - IsContainedFeature: False
+  - IsInternal: True
+  - IsOccurrence: False
+  - JournalIdentifier: EXTRUDE(1:1B)
+  - LoadParentPart: &lt;built-in method LoadParentPart of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - Location: [X=0,Y=0,Z=0]
+  - LogDiagnostic: &lt;built-in method LogDiagnostic of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - MakeCurrentFeature: &lt;built-in method MakeCurrentFeature of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - MakeSketchExternal: &lt;built-in method MakeSketchExternal of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - MakeSketchInternal: &lt;built-in method MakeSketchInternal of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - Name: 
+  - Null: &lt;NXOpen.Features.SketchFeature object at 0x0000027B81A55FC0&gt;
+  - OwningComponent: None
+  - OwningPart: &lt;NXOpen.Part object at 0x0000027BB02F92F0&gt;
+  - Print: &lt;built-in method Print of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - Prototype: None
+  - RemoveForEdit: &lt;built-in method RemoveForEdit of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - RemoveParameters: &lt;built-in method RemoveParameters of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - SetAttribute: &lt;built-in method SetAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - SetBooleanUserAttribute: &lt;built-in method SetBooleanUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - SetGroupActive: &lt;built-in method SetGroupActive of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - SetName: &lt;built-in method SetName of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - SetPdmReferenceAttribute: &lt;built-in method SetPdmReferenceAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB
+0&gt;
+  - SetReferenceAttribute: &lt;built-in method SetReferenceAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - SetTimeAttribute: &lt;built-in method SetTimeAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - SetTimeUserAttribute: &lt;built-in method SetTimeUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - SetUserAttribute: &lt;built-in method SetUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - SetUserAttributeLock: &lt;built-in method SetUserAttributeLock of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - ShowBody: &lt;built-in method ShowBody of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - ShowDimensions: &lt;built-in method ShowDimensions of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - ShowParents: &lt;built-in method ShowParents of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - Sketch: &lt;NXOpen.Sketch object at 0x0000027B802A4BB0&gt;
+  - Suppress: &lt;built-in method Suppress of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - Suppressed: False
+  - Tag: 57093
+  - Timestamp: 1
+  - Unhighlight: &lt;built-in method Unhighlight of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+  - Unsuppress: &lt;built-in method Unsuppress of NXOpen.Features.SketchFeature object at 0x0000027B8191BDB0&gt;
+----------------------------------------------------------------------
+User Attributes on this Feature:
+
+======================================================================
+Feature Name:    Extrude(1)
+Namespace:       NXOpen.Features
+Class:           Extrude
+Feature Type:    EXTRUDE
+----------------------------------------------------------------------
+Available Class Members (Properties &amp; Methods for scripting with 'Extrude'):
+  &lt;Error inspecting members: Feature has no origin.&gt;
+----------------------------------------------------------------------
+User Attributes on this Feature:
+
+======================================================================
+Feature Name:    Datum Coordinate System(2)
+Namespace:       NXOpen.Features
+Class:           DatumCsys
+Feature Type:    DATUM_CSYS
+----------------------------------------------------------------------
+Available Class Members (Properties &amp; Methods for scripting with 'DatumCsys'):
+  - AlgorithmVersion: 2097149
+  - AttributeInformation: &lt;class 'NXOpen.NXObjectAttributeInformation_Struct'&gt;
+  - AttributeType: &lt;class 'NXOpen.NXObjectAttributeType'&gt;
+  - BooleanType: &lt;class 'NXOpen.Features.FeatureBooleanType'&gt;
+  - BreakWaveLink: &lt;built-in method BreakWaveLink of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - ChangeBooleanType: &lt;built-in method ChangeBooleanType of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - CloneCsys: &lt;built-in method CloneCsys of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - ComputationalTime: &lt;class 'NXOpen.NXObjectComputationalTime_Struct'&gt;
+  - ContainerFeature: None
+  - CreateAttributeIterator: &lt;built-in method CreateAttributeIterator of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - DateAndTimeFormat: &lt;class 'NXOpen.NXObjectDateAndTimeFormat'&gt;
+  - DeleteAllAttributesByType: &lt;built-in method DeleteAllAttributesByType of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - DeleteAttributeByTypeAndTitle: &lt;built-in method DeleteAttributeByTypeAndTitle of NXOpen.Features.DatumCsys object at 0x0000027B8
+191B2A0&gt;
+  - DeleteClueAlerts: &lt;built-in method DeleteClueAlerts of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - DeleteHintAlerts: &lt;built-in method DeleteHintAlerts of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - DeleteInformationalAlerts: &lt;built-in method DeleteInformationalAlerts of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - DeleteUserAttribute: &lt;built-in method DeleteUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - DeleteUserAttributes: &lt;built-in method DeleteUserAttributes of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - DeleteWarningAlerts: &lt;built-in method DeleteWarningAlerts of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - DiagnosticType: &lt;class 'NXOpen.Features.FeatureDiagnosticType'&gt;
+  - FeatureType: DATUM_CSYS
+  - FindObject: &lt;built-in method FindObject of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GenerateFeatureSelectionData: &lt;built-in method GenerateFeatureSelectionData of NXOpen.Features.DatumCsys object at 0x0000027B819
+1B2A0&gt;
+  - GenerateFeatureSelectionDataString: &lt;built-in method GenerateFeatureSelectionDataString of NXOpen.Features.DatumCsys object at 0
+x0000027B8191B2A0&gt;
+  - GetAllChildren: &lt;built-in method GetAllChildren of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetAttributeTitlesByType: &lt;built-in method GetAttributeTitlesByType of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetBodies: &lt;built-in method GetBodies of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetBooleanUserAttribute: &lt;built-in method GetBooleanUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetChildren: &lt;built-in method GetChildren of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetComputationalTimeUserAttribute: &lt;built-in method GetComputationalTimeUserAttribute of NXOpen.Features.DatumCsys object at 0x0
+000027B8191B2A0&gt;
+  - GetEdges: &lt;built-in method GetEdges of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetEntities: &lt;built-in method GetEntities of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetExpressions: &lt;built-in method GetExpressions of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetFaces: &lt;built-in method GetFaces of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetFeatureClueHintMessages: &lt;built-in method GetFeatureClueHintMessages of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A
+0&gt;
+  - GetFeatureClueMessages: &lt;built-in method GetFeatureClueMessages of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetFeatureColor: &lt;built-in method GetFeatureColor of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetFeatureErrorMessages: &lt;built-in method GetFeatureErrorMessages of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetFeatureHintMessages: &lt;built-in method GetFeatureHintMessages of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetFeatureInformationalMessages: &lt;built-in method GetFeatureInformationalMessages of NXOpen.Features.DatumCsys object at 0x00000
+27B8191B2A0&gt;
+  - GetFeatureName: &lt;built-in method GetFeatureName of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetFeatureWarningMessages: &lt;built-in method GetFeatureWarningMessages of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetIntegerAttribute: &lt;built-in method GetIntegerAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetIntegerUserAttribute: &lt;built-in method GetIntegerUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetNextUserAttribute: &lt;built-in method GetNextUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetParents: &lt;built-in method GetParents of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetPdmReferenceAttributeValue: &lt;built-in method GetPdmReferenceAttributeValue of NXOpen.Features.DatumCsys object at 0x0000027B8
+191B2A0&gt;
+  - GetRealAttribute: &lt;built-in method GetRealAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetRealUserAttribute: &lt;built-in method GetRealUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetReferenceAttribute: &lt;built-in method GetReferenceAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetSections: &lt;built-in method GetSections of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetStringAttribute: &lt;built-in method GetStringAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetStringUserAttribute: &lt;built-in method GetStringUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetTimeAttribute: &lt;built-in method GetTimeAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetTimeUserAttribute: &lt;built-in method GetTimeUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetUserAttribute: &lt;built-in method GetUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetUserAttributeAsString: &lt;built-in method GetUserAttributeAsString of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetUserAttributeCount: &lt;built-in method GetUserAttributeCount of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetUserAttributeLock: &lt;built-in method GetUserAttributeLock of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetUserAttributeSize: &lt;built-in method GetUserAttributeSize of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetUserAttributeSourceObjects: &lt;built-in method GetUserAttributeSourceObjects of NXOpen.Features.DatumCsys object at 0x0000027B8
+191B2A0&gt;
+  - GetUserAttributes: &lt;built-in method GetUserAttributes of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - GetUserAttributesAsStrings: &lt;built-in method GetUserAttributesAsStrings of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A
+0&gt;
+  - HasUserAttribute: &lt;built-in method HasUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - HideBody: &lt;built-in method HideBody of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - HideParents: &lt;built-in method HideParents of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - Highlight: &lt;built-in method Highlight of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - IsBrowsableFeature: &lt;built-in method IsBrowsableFeature of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - IsContainedFeature: False
+  - IsInternal: True
+  - IsOccurrence: False
+  - JournalIdentifier: SIMPLE HOLE(2:1B:1B)
+  - LoadParentPart: &lt;built-in method LoadParentPart of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - Location: [X=0,Y=20,Z=15]
+  - LogDiagnostic: &lt;built-in method LogDiagnostic of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - MakeCurrentFeature: &lt;built-in method MakeCurrentFeature of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - MakeSketchExternal: &lt;built-in method MakeSketchExternal of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - MakeSketchInternal: &lt;built-in method MakeSketchInternal of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - Name: 
+  - Null: &lt;NXOpen.Features.DatumCsys object at 0x0000027B81ACC420&gt;
+  - OwningComponent: None
+  - OwningPart: &lt;NXOpen.Part object at 0x0000027BB02F92F0&gt;
+  - Print: &lt;built-in method Print of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - Prototype: None
+  - RemoveForEdit: &lt;built-in method RemoveForEdit of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - RemoveParameters: &lt;built-in method RemoveParameters of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - SetAttribute: &lt;built-in method SetAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - SetBooleanUserAttribute: &lt;built-in method SetBooleanUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - SetGroupActive: &lt;built-in method SetGroupActive of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - SetName: &lt;built-in method SetName of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - SetPdmReferenceAttribute: &lt;built-in method SetPdmReferenceAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - SetReferenceAttribute: &lt;built-in method SetReferenceAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - SetTimeAttribute: &lt;built-in method SetTimeAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - SetTimeUserAttribute: &lt;built-in method SetTimeUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - SetUserAttribute: &lt;built-in method SetUserAttribute of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - SetUserAttributeLock: &lt;built-in method SetUserAttributeLock of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - SetWcsAtCsys: &lt;built-in method SetWcsAtCsys of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - ShowBody: &lt;built-in method ShowBody of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - ShowDimensions: &lt;built-in method ShowDimensions of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - ShowParents: &lt;built-in method ShowParents of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - Suppress: &lt;built-in method Suppress of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - Suppressed: False
+  - Tag: 57372
+  - Timestamp: 2
+  - Unhighlight: &lt;built-in method Unhighlight of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+  - Unsuppress: &lt;built-in method Unsuppress of NXOpen.Features.DatumCsys object at 0x0000027B8191B2A0&gt;
+----------------------------------------------------------------------
+User Attributes on this Feature:
+
+======================================================================
+Feature Name:    SKETCH_001:Sketch(2)
+Namespace:       NXOpen.Features
+Class:           SketchFeature
+Feature Type:    SKETCH
+----------------------------------------------------------------------
+Available Class Members (Properties &amp; Methods for scripting with 'SketchFeature'):
+  - AlgorithmVersion: 2097149
+  - AttributeInformation: &lt;class 'NXOpen.NXObjectAttributeInformation_Struct'&gt;
+  - AttributeType: &lt;class 'NXOpen.NXObjectAttributeType'&gt;
+  - BooleanType: &lt;class 'NXOpen.Features.FeatureBooleanType'&gt;
+  - BreakWaveLink: &lt;built-in method BreakWaveLink of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - ChangeBooleanType: &lt;built-in method ChangeBooleanType of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - ComputationalTime: &lt;class 'NXOpen.NXObjectComputationalTime_Struct'&gt;
+  - ContainerFeature: None
+  - CreateAttributeIterator: &lt;built-in method CreateAttributeIterator of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - DateAndTimeFormat: &lt;class 'NXOpen.NXObjectDateAndTimeFormat'&gt;
+  - DeleteAllAttributesByType: &lt;built-in method DeleteAllAttributesByType of NXOpen.Features.SketchFeature object at 0x0000027B81690
+720&gt;
+  - DeleteAttributeByTypeAndTitle: &lt;built-in method DeleteAttributeByTypeAndTitle of NXOpen.Features.SketchFeature object at 0x00000
+27B81690720&gt;
+  - DeleteClueAlerts: &lt;built-in method DeleteClueAlerts of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - DeleteHintAlerts: &lt;built-in method DeleteHintAlerts of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - DeleteInformationalAlerts: &lt;built-in method DeleteInformationalAlerts of NXOpen.Features.SketchFeature object at 0x0000027B81690
+720&gt;
+  - DeleteUserAttribute: &lt;built-in method DeleteUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - DeleteUserAttributes: &lt;built-in method DeleteUserAttributes of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - DeleteWarningAlerts: &lt;built-in method DeleteWarningAlerts of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - DiagnosticType: &lt;class 'NXOpen.Features.FeatureDiagnosticType'&gt;
+  - FeatureType: SKETCH
+  - FindObject: &lt;built-in method FindObject of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GenerateFeatureSelectionData: &lt;built-in method GenerateFeatureSelectionData of NXOpen.Features.SketchFeature object at 0x0000027
+B81690720&gt;
+  - GenerateFeatureSelectionDataString: &lt;built-in method GenerateFeatureSelectionDataString of NXOpen.Features.SketchFeature object 
+at 0x0000027B81690720&gt;
+  - GetAllChildren: &lt;built-in method GetAllChildren of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetAttributeTitlesByType: &lt;built-in method GetAttributeTitlesByType of NXOpen.Features.SketchFeature object at 0x0000027B8169072
+0&gt;
+  - GetBodies: &lt;built-in method GetBodies of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetBooleanUserAttribute: &lt;built-in method GetBooleanUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetChildren: &lt;built-in method GetChildren of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetComputationalTimeUserAttribute: &lt;built-in method GetComputationalTimeUserAttribute of NXOpen.Features.SketchFeature object at
+ 0x0000027B81690720&gt;
+  - GetEdges: &lt;built-in method GetEdges of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetEntities: &lt;built-in method GetEntities of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetExpressions: &lt;built-in method GetExpressions of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetFaces: &lt;built-in method GetFaces of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetFeatureClueHintMessages: &lt;built-in method GetFeatureClueHintMessages of NXOpen.Features.SketchFeature object at 0x0000027B816
+90720&gt;
+  - GetFeatureClueMessages: &lt;built-in method GetFeatureClueMessages of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetFeatureColor: &lt;built-in method GetFeatureColor of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetFeatureErrorMessages: &lt;built-in method GetFeatureErrorMessages of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetFeatureHintMessages: &lt;built-in method GetFeatureHintMessages of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetFeatureInformationalMessages: &lt;built-in method GetFeatureInformationalMessages of NXOpen.Features.SketchFeature object at 0x0
+000027B81690720&gt;
+  - GetFeatureName: &lt;built-in method GetFeatureName of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetFeatureWarningMessages: &lt;built-in method GetFeatureWarningMessages of NXOpen.Features.SketchFeature object at 0x0000027B81690
+720&gt;
+  - GetIntegerAttribute: &lt;built-in method GetIntegerAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetIntegerUserAttribute: &lt;built-in method GetIntegerUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetNextUserAttribute: &lt;built-in method GetNextUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetParents: &lt;built-in method GetParents of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetPdmReferenceAttributeValue: &lt;built-in method GetPdmReferenceAttributeValue of NXOpen.Features.SketchFeature object at 0x00000
+27B81690720&gt;
+  - GetRealAttribute: &lt;built-in method GetRealAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetRealUserAttribute: &lt;built-in method GetRealUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetReferenceAttribute: &lt;built-in method GetReferenceAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetSections: &lt;built-in method GetSections of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetStringAttribute: &lt;built-in method GetStringAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetStringUserAttribute: &lt;built-in method GetStringUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetTimeAttribute: &lt;built-in method GetTimeAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetTimeUserAttribute: &lt;built-in method GetTimeUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetUserAttribute: &lt;built-in method GetUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetUserAttributeAsString: &lt;built-in method GetUserAttributeAsString of NXOpen.Features.SketchFeature object at 0x0000027B8169072
+0&gt;
+  - GetUserAttributeCount: &lt;built-in method GetUserAttributeCount of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetUserAttributeLock: &lt;built-in method GetUserAttributeLock of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetUserAttributeSize: &lt;built-in method GetUserAttributeSize of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetUserAttributeSourceObjects: &lt;built-in method GetUserAttributeSourceObjects of NXOpen.Features.SketchFeature object at 0x00000
+27B81690720&gt;
+  - GetUserAttributes: &lt;built-in method GetUserAttributes of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - GetUserAttributesAsStrings: &lt;built-in method GetUserAttributesAsStrings of NXOpen.Features.SketchFeature object at 0x0000027B816
+90720&gt;
+  - HasUserAttribute: &lt;built-in method HasUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - HideBody: &lt;built-in method HideBody of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - HideParents: &lt;built-in method HideParents of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - Highlight: &lt;built-in method Highlight of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - IsBrowsableFeature: &lt;built-in method IsBrowsableFeature of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - IsContainedFeature: False
+  - IsInternal: True
+  - IsOccurrence: False
+  - JournalIdentifier: SIMPLE HOLE(2:1B)
+  - LoadParentPart: &lt;built-in method LoadParentPart of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - Location: [X=0,Y=20,Z=15]
+  - LogDiagnostic: &lt;built-in method LogDiagnostic of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - MakeCurrentFeature: &lt;built-in method MakeCurrentFeature of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - MakeSketchExternal: &lt;built-in method MakeSketchExternal of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - MakeSketchInternal: &lt;built-in method MakeSketchInternal of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - Name: 
+  - Null: &lt;NXOpen.Features.SketchFeature object at 0x0000027B81A55FC0&gt;
+  - OwningComponent: None
+  - OwningPart: &lt;NXOpen.Part object at 0x0000027BB02F92F0&gt;
+  - Print: &lt;built-in method Print of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - Prototype: None
+  - RemoveForEdit: &lt;built-in method RemoveForEdit of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - RemoveParameters: &lt;built-in method RemoveParameters of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - SetAttribute: &lt;built-in method SetAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - SetBooleanUserAttribute: &lt;built-in method SetBooleanUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - SetGroupActive: &lt;built-in method SetGroupActive of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - SetName: &lt;built-in method SetName of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - SetPdmReferenceAttribute: &lt;built-in method SetPdmReferenceAttribute of NXOpen.Features.SketchFeature object at 0x0000027B8169072
+0&gt;
+  - SetReferenceAttribute: &lt;built-in method SetReferenceAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - SetTimeAttribute: &lt;built-in method SetTimeAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - SetTimeUserAttribute: &lt;built-in method SetTimeUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - SetUserAttribute: &lt;built-in method SetUserAttribute of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - SetUserAttributeLock: &lt;built-in method SetUserAttributeLock of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - ShowBody: &lt;built-in method ShowBody of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - ShowDimensions: &lt;built-in method ShowDimensions of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - ShowParents: &lt;built-in method ShowParents of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - Sketch: &lt;NXOpen.Sketch object at 0x0000027B81633330&gt;
+  - Suppress: &lt;built-in method Suppress of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - Suppressed: False
+  - Tag: 57403
+  - Timestamp: 2
+  - Unhighlight: &lt;built-in method Unhighlight of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+  - Unsuppress: &lt;built-in method Unsuppress of NXOpen.Features.SketchFeature object at 0x0000027B81690720&gt;
+----------------------------------------------------------------------
+User Attributes on this Feature:
+
+======================================================================
+Feature Name:    Ø6 Hole(2)
+Namespace:       NXOpen.Features
+Class:           HolePackage
+Feature Type:    HOLE PACKAGE
+----------------------------------------------------------------------
+Available Class Members (Properties &amp; Methods for scripting with 'HolePackage'):
+  - AlgorithmVersion: 2097149
+  - AttributeInformation: &lt;class 'NXOpen.NXObjectAttributeInformation_Struct'&gt;
+  - AttributeType: &lt;class 'NXOpen.NXObjectAttributeType'&gt;
+  - BooleanType: &lt;class 'NXOpen.Features.FeatureBooleanType'&gt;
+  - BreakWaveLink: &lt;built-in method BreakWaveLink of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - ChangeBooleanType: &lt;built-in method ChangeBooleanType of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - ComputationalTime: &lt;class 'NXOpen.NXObjectComputationalTime_Struct'&gt;
+  - ContainerFeature: None
+  - CreateAttributeIterator: &lt;built-in method CreateAttributeIterator of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - DateAndTimeFormat: &lt;class 'NXOpen.NXObjectDateAndTimeFormat'&gt;
+  - DeleteAllAttributesByType: &lt;built-in method DeleteAllAttributesByType of NXOpen.Features.HolePackage object at 0x0000027B802772A
+0&gt;
+  - DeleteAttributeByTypeAndTitle: &lt;built-in method DeleteAttributeByTypeAndTitle of NXOpen.Features.HolePackage object at 0x0000027
+B802772A0&gt;
+  - DeleteClueAlerts: &lt;built-in method DeleteClueAlerts of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - DeleteHintAlerts: &lt;built-in method DeleteHintAlerts of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - DeleteInformationalAlerts: &lt;built-in method DeleteInformationalAlerts of NXOpen.Features.HolePackage object at 0x0000027B802772A
+0&gt;
+  - DeleteUserAttribute: &lt;built-in method DeleteUserAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - DeleteUserAttributes: &lt;built-in method DeleteUserAttributes of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - DeleteWarningAlerts: &lt;built-in method DeleteWarningAlerts of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - DiagnosticType: &lt;class 'NXOpen.Features.FeatureDiagnosticType'&gt;
+  - FeatureType: HOLE PACKAGE
+  - FindObject: &lt;built-in method FindObject of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GenerateFeatureSelectionData: &lt;built-in method GenerateFeatureSelectionData of NXOpen.Features.HolePackage object at 0x0000027B8
+02772A0&gt;
+  - GenerateFeatureSelectionDataString: &lt;built-in method GenerateFeatureSelectionDataString of NXOpen.Features.HolePackage object at
+ 0x0000027B802772A0&gt;
+  - GetAllChildren: &lt;built-in method GetAllChildren of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetAttributeTitlesByType: &lt;built-in method GetAttributeTitlesByType of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetBodies: &lt;built-in method GetBodies of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetBooleanUserAttribute: &lt;built-in method GetBooleanUserAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetChildren: &lt;built-in method GetChildren of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetComputationalTimeUserAttribute: &lt;built-in method GetComputationalTimeUserAttribute of NXOpen.Features.HolePackage object at 0
+x0000027B802772A0&gt;
+  - GetDirections: &lt;built-in method GetDirections of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetEdges: &lt;built-in method GetEdges of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetEntities: &lt;built-in method GetEntities of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetExpressions: &lt;built-in method GetExpressions of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetFaces: &lt;built-in method GetFaces of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetFeatureClueHintMessages: &lt;built-in method GetFeatureClueHintMessages of NXOpen.Features.HolePackage object at 0x0000027B80277
+2A0&gt;
+  - GetFeatureClueMessages: &lt;built-in method GetFeatureClueMessages of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetFeatureColor: &lt;built-in method GetFeatureColor of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetFeatureErrorMessages: &lt;built-in method GetFeatureErrorMessages of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetFeatureHintMessages: &lt;built-in method GetFeatureHintMessages of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetFeatureInformationalMessages: &lt;built-in method GetFeatureInformationalMessages of NXOpen.Features.HolePackage object at 0x000
+0027B802772A0&gt;
+  - GetFeatureName: &lt;built-in method GetFeatureName of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetFeatureWarningMessages: &lt;built-in method GetFeatureWarningMessages of NXOpen.Features.HolePackage object at 0x0000027B802772A
+0&gt;
+  - GetHoleSeriesEndHoleFeature: &lt;built-in method GetHoleSeriesEndHoleFeature of NXOpen.Features.HolePackage object at 0x0000027B802
+772A0&gt;
+  - GetHoleSeriesMiddleHoleFeatures: &lt;built-in method GetHoleSeriesMiddleHoleFeatures of NXOpen.Features.HolePackage object at 0x000
+0027B802772A0&gt;
+  - GetHoleSeriesStartHoleFeature: &lt;built-in method GetHoleSeriesStartHoleFeature of NXOpen.Features.HolePackage object at 0x0000027
+B802772A0&gt;
+  - GetIntegerAttribute: &lt;built-in method GetIntegerAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetIntegerUserAttribute: &lt;built-in method GetIntegerUserAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetNextUserAttribute: &lt;built-in method GetNextUserAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetOrigins: &lt;built-in method GetOrigins of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetParents: &lt;built-in method GetParents of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetPdmReferenceAttributeValue: &lt;built-in method GetPdmReferenceAttributeValue of NXOpen.Features.HolePackage object at 0x0000027
+B802772A0&gt;
+  - GetRealAttribute: &lt;built-in method GetRealAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetRealUserAttribute: &lt;built-in method GetRealUserAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetReferenceAttribute: &lt;built-in method GetReferenceAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetSections: &lt;built-in method GetSections of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetStringAttribute: &lt;built-in method GetStringAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetStringUserAttribute: &lt;built-in method GetStringUserAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetTimeAttribute: &lt;built-in method GetTimeAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetTimeUserAttribute: &lt;built-in method GetTimeUserAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetUserAttribute: &lt;built-in method GetUserAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetUserAttributeAsString: &lt;built-in method GetUserAttributeAsString of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetUserAttributeCount: &lt;built-in method GetUserAttributeCount of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetUserAttributeLock: &lt;built-in method GetUserAttributeLock of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetUserAttributeSize: &lt;built-in method GetUserAttributeSize of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetUserAttributeSourceObjects: &lt;built-in method GetUserAttributeSourceObjects of NXOpen.Features.HolePackage object at 0x0000027
+B802772A0&gt;
+  - GetUserAttributes: &lt;built-in method GetUserAttributes of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - GetUserAttributesAsStrings: &lt;built-in method GetUserAttributesAsStrings of NXOpen.Features.HolePackage object at 0x0000027B80277
+2A0&gt;
+  - HasUserAttribute: &lt;built-in method HasUserAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - HideBody: &lt;built-in method HideBody of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - HideParents: &lt;built-in method HideParents of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - Highlight: &lt;built-in method Highlight of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - IsBrowsableFeature: &lt;built-in method IsBrowsableFeature of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - IsContainedFeature: False
+  - IsInternal: False
+  - IsOccurrence: False
+  - JournalIdentifier: SIMPLE HOLE(2)
+  - LoadParentPart: &lt;built-in method LoadParentPart of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - Location: [X=10.4854332371289,Y=3.6134573873987099,Z=15]
+  - LogDiagnostic: &lt;built-in method LogDiagnostic of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - MakeCurrentFeature: &lt;built-in method MakeCurrentFeature of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - MakeSketchExternal: &lt;built-in method MakeSketchExternal of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - MakeSketchInternal: &lt;built-in method MakeSketchInternal of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - Name: 
+  - Null: &lt;NXOpen.Features.HolePackage object at 0x0000027B81ACC5A0&gt;
+  - OwningComponent: None
+  - OwningPart: &lt;NXOpen.Part object at 0x0000027BB02F92F0&gt;
+  - Print: &lt;built-in method Print of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - Prototype: None
+  - RemoveForEdit: &lt;built-in method RemoveForEdit of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - RemoveParameters: &lt;built-in method RemoveParameters of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - SetAttribute: &lt;built-in method SetAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - SetBooleanUserAttribute: &lt;built-in method SetBooleanUserAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - SetGroupActive: &lt;built-in method SetGroupActive of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - SetName: &lt;built-in method SetName of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - SetPdmReferenceAttribute: &lt;built-in method SetPdmReferenceAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - SetReferenceAttribute: &lt;built-in method SetReferenceAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - SetTimeAttribute: &lt;built-in method SetTimeAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - SetTimeUserAttribute: &lt;built-in method SetTimeUserAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - SetUserAttribute: &lt;built-in method SetUserAttribute of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - SetUserAttributeLock: &lt;built-in method SetUserAttributeLock of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - ShowBody: &lt;built-in method ShowBody of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - ShowDimensions: &lt;built-in method ShowDimensions of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - ShowParents: &lt;built-in method ShowParents of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - Suppress: &lt;built-in method Suppress of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - Suppressed: False
+  - Tag: 56905
+  - Timestamp: 2
+  - Unhighlight: &lt;built-in method Unhighlight of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+  - Unsuppress: &lt;built-in method Unsuppress of NXOpen.Features.HolePackage object at 0x0000027B802772A0&gt;
+----------------------------------------------------------------------
+User Attributes on this Feature:
+
+======================================================================
+Feature Name:    Ø6 Hole(2)
+Namespace:       NXOpen.Features
+Class:           BodyFeature
+Feature Type:    SIMPLE HOLE
+----------------------------------------------------------------------
+Available Class Members (Properties &amp; Methods for scripting with 'BodyFeature'):
+  - AlgorithmVersion: 2097149
+  - AttributeInformation: &lt;class 'NXOpen.NXObjectAttributeInformation_Struct'&gt;
+  - AttributeType: &lt;class 'NXOpen.NXObjectAttributeType'&gt;
+  - BooleanType: &lt;class 'NXOpen.Features.FeatureBooleanType'&gt;
+  - BreakWaveLink: &lt;built-in method BreakWaveLink of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - ChangeBooleanType: &lt;built-in method ChangeBooleanType of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - ComputationalTime: &lt;class 'NXOpen.NXObjectComputationalTime_Struct'&gt;
+  - ContainerFeature: None
+  - CreateAttributeIterator: &lt;built-in method CreateAttributeIterator of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - DateAndTimeFormat: &lt;class 'NXOpen.NXObjectDateAndTimeFormat'&gt;
+  - DeleteAllAttributesByType: &lt;built-in method DeleteAllAttributesByType of NXOpen.Features.BodyFeature object at 0x0000027B8027772
+0&gt;
+  - DeleteAttributeByTypeAndTitle: &lt;built-in method DeleteAttributeByTypeAndTitle of NXOpen.Features.BodyFeature object at 0x0000027
+B80277720&gt;
+  - DeleteClueAlerts: &lt;built-in method DeleteClueAlerts of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - DeleteHintAlerts: &lt;built-in method DeleteHintAlerts of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - DeleteInformationalAlerts: &lt;built-in method DeleteInformationalAlerts of NXOpen.Features.BodyFeature object at 0x0000027B8027772
+0&gt;
+  - DeleteUserAttribute: &lt;built-in method DeleteUserAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - DeleteUserAttributes: &lt;built-in method DeleteUserAttributes of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - DeleteWarningAlerts: &lt;built-in method DeleteWarningAlerts of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - DiagnosticType: &lt;class 'NXOpen.Features.FeatureDiagnosticType'&gt;
+  - FeatureType: SIMPLE HOLE
+  - FindObject: &lt;built-in method FindObject of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GenerateFeatureSelectionData: &lt;built-in method GenerateFeatureSelectionData of NXOpen.Features.BodyFeature object at 0x0000027B8
+0277720&gt;
+  - GenerateFeatureSelectionDataString: &lt;built-in method GenerateFeatureSelectionDataString of NXOpen.Features.BodyFeature object at
+ 0x0000027B80277720&gt;
+  - GetAllChildren: &lt;built-in method GetAllChildren of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetAttributeTitlesByType: &lt;built-in method GetAttributeTitlesByType of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetBodies: &lt;built-in method GetBodies of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetBooleanUserAttribute: &lt;built-in method GetBooleanUserAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetChildren: &lt;built-in method GetChildren of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetComputationalTimeUserAttribute: &lt;built-in method GetComputationalTimeUserAttribute of NXOpen.Features.BodyFeature object at 0
+x0000027B80277720&gt;
+  - GetEdges: &lt;built-in method GetEdges of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetEntities: &lt;built-in method GetEntities of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetExpressions: &lt;built-in method GetExpressions of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetFaces: &lt;built-in method GetFaces of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetFeatureClueHintMessages: &lt;built-in method GetFeatureClueHintMessages of NXOpen.Features.BodyFeature object at 0x0000027B80277
+720&gt;
+  - GetFeatureClueMessages: &lt;built-in method GetFeatureClueMessages of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetFeatureColor: &lt;built-in method GetFeatureColor of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetFeatureErrorMessages: &lt;built-in method GetFeatureErrorMessages of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetFeatureHintMessages: &lt;built-in method GetFeatureHintMessages of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetFeatureInformationalMessages: &lt;built-in method GetFeatureInformationalMessages of NXOpen.Features.BodyFeature object at 0x000
+0027B80277720&gt;
+  - GetFeatureName: &lt;built-in method GetFeatureName of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetFeatureWarningMessages: &lt;built-in method GetFeatureWarningMessages of NXOpen.Features.BodyFeature object at 0x0000027B8027772
+0&gt;
+  - GetIntegerAttribute: &lt;built-in method GetIntegerAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetIntegerUserAttribute: &lt;built-in method GetIntegerUserAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetNextUserAttribute: &lt;built-in method GetNextUserAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetParents: &lt;built-in method GetParents of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetPdmReferenceAttributeValue: &lt;built-in method GetPdmReferenceAttributeValue of NXOpen.Features.BodyFeature object at 0x0000027
+B80277720&gt;
+  - GetRealAttribute: &lt;built-in method GetRealAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetRealUserAttribute: &lt;built-in method GetRealUserAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetReferenceAttribute: &lt;built-in method GetReferenceAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetSections: &lt;built-in method GetSections of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetStringAttribute: &lt;built-in method GetStringAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetStringUserAttribute: &lt;built-in method GetStringUserAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetTimeAttribute: &lt;built-in method GetTimeAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetTimeUserAttribute: &lt;built-in method GetTimeUserAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetUserAttribute: &lt;built-in method GetUserAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetUserAttributeAsString: &lt;built-in method GetUserAttributeAsString of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetUserAttributeCount: &lt;built-in method GetUserAttributeCount of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetUserAttributeLock: &lt;built-in method GetUserAttributeLock of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetUserAttributeSize: &lt;built-in method GetUserAttributeSize of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetUserAttributeSourceObjects: &lt;built-in method GetUserAttributeSourceObjects of NXOpen.Features.BodyFeature object at 0x0000027
+B80277720&gt;
+  - GetUserAttributes: &lt;built-in method GetUserAttributes of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - GetUserAttributesAsStrings: &lt;built-in method GetUserAttributesAsStrings of NXOpen.Features.BodyFeature object at 0x0000027B80277
+720&gt;
+  - HasUserAttribute: &lt;built-in method HasUserAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - HideBody: &lt;built-in method HideBody of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - HideParents: &lt;built-in method HideParents of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - Highlight: &lt;built-in method Highlight of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - IsBrowsableFeature: &lt;built-in method IsBrowsableFeature of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - IsContainedFeature: False
+  - IsInternal: True
+  - IsOccurrence: False
+  - JournalIdentifier: SIMPLE HOLE(2:1A)
+  - LoadParentPart: &lt;built-in method LoadParentPart of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - Location: [X=10.4854332371289,Y=3.6134573873987099,Z=15]
+  - LogDiagnostic: &lt;built-in method LogDiagnostic of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - MakeCurrentFeature: &lt;built-in method MakeCurrentFeature of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - MakeSketchExternal: &lt;built-in method MakeSketchExternal of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - MakeSketchInternal: &lt;built-in method MakeSketchInternal of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - Name: 
+  - Null: &lt;NXOpen.Features.BodyFeature object at 0x0000027B819FD900&gt;
+  - OwningComponent: None
+  - OwningPart: &lt;NXOpen.Part object at 0x0000027BB02F92F0&gt;
+  - Print: &lt;built-in method Print of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - Prototype: None
+  - RemoveForEdit: &lt;built-in method RemoveForEdit of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - RemoveParameters: &lt;built-in method RemoveParameters of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - SetAttribute: &lt;built-in method SetAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - SetBooleanUserAttribute: &lt;built-in method SetBooleanUserAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - SetGroupActive: &lt;built-in method SetGroupActive of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - SetName: &lt;built-in method SetName of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - SetPdmReferenceAttribute: &lt;built-in method SetPdmReferenceAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - SetReferenceAttribute: &lt;built-in method SetReferenceAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - SetTimeAttribute: &lt;built-in method SetTimeAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - SetTimeUserAttribute: &lt;built-in method SetTimeUserAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - SetUserAttribute: &lt;built-in method SetUserAttribute of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - SetUserAttributeLock: &lt;built-in method SetUserAttributeLock of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - ShowBody: &lt;built-in method ShowBody of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - ShowDimensions: &lt;built-in method ShowDimensions of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - ShowParents: &lt;built-in method ShowParents of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - Suppress: &lt;built-in method Suppress of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - Suppressed: False
+  - Tag: 57214
+  - Timestamp: 2
+  - Unhighlight: &lt;built-in method Unhighlight of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+  - Unsuppress: &lt;built-in method Unsuppress of NXOpen.Features.BodyFeature object at 0x0000027B80277720&gt;
+----------------------------------------------------------------------
+User Attributes on this Feature:
+
+======================================================================
+Feature Name:    Edge Blend(3)
+Namespace:       NXOpen.Features
+Class:           EdgeBlend
+Feature Type:    BLEND
+----------------------------------------------------------------------
+Available Class Members (Properties &amp; Methods for scripting with 'EdgeBlend'):
+  &lt;Error inspecting members: Feature has no origin.&gt;
+----------------------------------------------------------------------
+User Attributes on this Feature:
+
+======================================================================
+Feature Name:    Chamfer(4)
+Namespace:       NXOpen.Features
+Class:           ApexRangeChamfer
+Feature Type:    CHAMFER
+----------------------------------------------------------------------
+Available Class Members (Properties &amp; Methods for scripting with 'ApexRangeChamfer'):
+  &lt;Error inspecting members: Feature has no origin.&gt;
+----------------------------------------------------------------------
+User Attributes on this Feature:
+
+======================================================================
+Feature Name:    Draft(5)
+Namespace:       NXOpen.Features
+Class:           Draft
+Feature Type:    DRAFT
+----------------------------------------------------------------------
+Available Class Members (Properties &amp; Methods for scripting with 'Draft'):
+  - AlgorithmVersion: 2097149
+  - AttributeInformation: &lt;class 'NXOpen.NXObjectAttributeInformation_Struct'&gt;
+  - AttributeType: &lt;class 'NXOpen.NXObjectAttributeType'&gt;
+  - BooleanType: &lt;class 'NXOpen.Features.FeatureBooleanType'&gt;
+  - BreakWaveLink: &lt;built-in method BreakWaveLink of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - ChangeBooleanType: &lt;built-in method ChangeBooleanType of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - ComputationalTime: &lt;class 'NXOpen.NXObjectComputationalTime_Struct'&gt;
+  - ContainerFeature: None
+  - CreateAttributeIterator: &lt;built-in method CreateAttributeIterator of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - DateAndTimeFormat: &lt;class 'NXOpen.NXObjectDateAndTimeFormat'&gt;
+  - DeleteAllAttributesByType: &lt;built-in method DeleteAllAttributesByType of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - DeleteAttributeByTypeAndTitle: &lt;built-in method DeleteAttributeByTypeAndTitle of NXOpen.Features.Draft object at 0x0000027B832D3
+F60&gt;
+  - DeleteClueAlerts: &lt;built-in method DeleteClueAlerts of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - DeleteHintAlerts: &lt;built-in method DeleteHintAlerts of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - DeleteInformationalAlerts: &lt;built-in method DeleteInformationalAlerts of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - DeleteUserAttribute: &lt;built-in method DeleteUserAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - DeleteUserAttributes: &lt;built-in method DeleteUserAttributes of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - DeleteWarningAlerts: &lt;built-in method DeleteWarningAlerts of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - DiagnosticType: &lt;class 'NXOpen.Features.FeatureDiagnosticType'&gt;
+  - FeatureType: DRAFT
+  - FindObject: &lt;built-in method FindObject of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GenerateFeatureSelectionData: &lt;built-in method GenerateFeatureSelectionData of NXOpen.Features.Draft object at 0x0000027B832D3F6
+0&gt;
+  - GenerateFeatureSelectionDataString: &lt;built-in method GenerateFeatureSelectionDataString of NXOpen.Features.Draft object at 0x000
+0027B832D3F60&gt;
+  - GetAllChildren: &lt;built-in method GetAllChildren of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetAttributeTitlesByType: &lt;built-in method GetAttributeTitlesByType of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetBodies: &lt;built-in method GetBodies of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetBooleanUserAttribute: &lt;built-in method GetBooleanUserAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetChildren: &lt;built-in method GetChildren of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetComputationalTimeUserAttribute: &lt;built-in method GetComputationalTimeUserAttribute of NXOpen.Features.Draft object at 0x00000
+27B832D3F60&gt;
+  - GetEdges: &lt;built-in method GetEdges of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetEntities: &lt;built-in method GetEntities of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetExpressions: &lt;built-in method GetExpressions of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetFaces: &lt;built-in method GetFaces of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetFeatureClueHintMessages: &lt;built-in method GetFeatureClueHintMessages of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetFeatureClueMessages: &lt;built-in method GetFeatureClueMessages of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetFeatureColor: &lt;built-in method GetFeatureColor of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetFeatureErrorMessages: &lt;built-in method GetFeatureErrorMessages of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetFeatureHintMessages: &lt;built-in method GetFeatureHintMessages of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetFeatureInformationalMessages: &lt;built-in method GetFeatureInformationalMessages of NXOpen.Features.Draft object at 0x0000027B8
+32D3F60&gt;
+  - GetFeatureName: &lt;built-in method GetFeatureName of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetFeatureWarningMessages: &lt;built-in method GetFeatureWarningMessages of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetIntegerAttribute: &lt;built-in method GetIntegerAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetIntegerUserAttribute: &lt;built-in method GetIntegerUserAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetNextUserAttribute: &lt;built-in method GetNextUserAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetParents: &lt;built-in method GetParents of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetPdmReferenceAttributeValue: &lt;built-in method GetPdmReferenceAttributeValue of NXOpen.Features.Draft object at 0x0000027B832D3
+F60&gt;
+  - GetRealAttribute: &lt;built-in method GetRealAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetRealUserAttribute: &lt;built-in method GetRealUserAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetReferenceAttribute: &lt;built-in method GetReferenceAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetSections: &lt;built-in method GetSections of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetStringAttribute: &lt;built-in method GetStringAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetStringUserAttribute: &lt;built-in method GetStringUserAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetTimeAttribute: &lt;built-in method GetTimeAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetTimeUserAttribute: &lt;built-in method GetTimeUserAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetUserAttribute: &lt;built-in method GetUserAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetUserAttributeAsString: &lt;built-in method GetUserAttributeAsString of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetUserAttributeCount: &lt;built-in method GetUserAttributeCount of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetUserAttributeLock: &lt;built-in method GetUserAttributeLock of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetUserAttributeSize: &lt;built-in method GetUserAttributeSize of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetUserAttributeSourceObjects: &lt;built-in method GetUserAttributeSourceObjects of NXOpen.Features.Draft object at 0x0000027B832D3
+F60&gt;
+  - GetUserAttributes: &lt;built-in method GetUserAttributes of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - GetUserAttributesAsStrings: &lt;built-in method GetUserAttributesAsStrings of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - HasUserAttribute: &lt;built-in method HasUserAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - HideBody: &lt;built-in method HideBody of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - HideParents: &lt;built-in method HideParents of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - Highlight: &lt;built-in method Highlight of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - IsBrowsableFeature: &lt;built-in method IsBrowsableFeature of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - IsContainedFeature: False
+  - IsInternal: False
+  - IsOccurrence: False
+  - JournalIdentifier: DRAFT(5)
+  - LoadParentPart: &lt;built-in method LoadParentPart of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - Location: [X=12.5,Y=1.9999999999999982,Z=15]
+  - LogDiagnostic: &lt;built-in method LogDiagnostic of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - MakeCurrentFeature: &lt;built-in method MakeCurrentFeature of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - MakeSketchExternal: &lt;built-in method MakeSketchExternal of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - MakeSketchInternal: &lt;built-in method MakeSketchInternal of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - Name: 
+  - Null: &lt;NXOpen.Features.Draft object at 0x0000027B81A7EB10&gt;
+  - OwningComponent: None
+  - OwningPart: &lt;NXOpen.Part object at 0x0000027BB02F92F0&gt;
+  - Print: &lt;built-in method Print of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - Prototype: None
+  - RemoveForEdit: &lt;built-in method RemoveForEdit of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - RemoveParameters: &lt;built-in method RemoveParameters of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - SetAttribute: &lt;built-in method SetAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - SetBooleanUserAttribute: &lt;built-in method SetBooleanUserAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - SetGroupActive: &lt;built-in method SetGroupActive of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - SetName: &lt;built-in method SetName of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - SetPdmReferenceAttribute: &lt;built-in method SetPdmReferenceAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - SetReferenceAttribute: &lt;built-in method SetReferenceAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - SetTimeAttribute: &lt;built-in method SetTimeAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - SetTimeUserAttribute: &lt;built-in method SetTimeUserAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - SetUserAttribute: &lt;built-in method SetUserAttribute of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - SetUserAttributeLock: &lt;built-in method SetUserAttributeLock of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - ShowBody: &lt;built-in method ShowBody of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - ShowDimensions: &lt;built-in method ShowDimensions of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - ShowParents: &lt;built-in method ShowParents of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - Suppress: &lt;built-in method Suppress of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - Suppressed: False
+  - Tag: 57199
+  - Timestamp: 5
+  - Unhighlight: &lt;built-in method Unhighlight of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+  - Unsuppress: &lt;built-in method Unsuppress of NXOpen.Features.Draft object at 0x0000027B832D3F60&gt;
+----------------------------------------------------------------------
+User Attributes on this Feature:
+
+======================================================================
+Feature Name:    Shell(6)
+Namespace:       NXOpen.Features
+Class:           Shell
+Feature Type:    SHELL
+----------------------------------------------------------------------
+Available Class Members (Properties &amp; Methods for scripting with 'Shell'):
+  &lt;Error inspecting members: Feature has no origin.&gt;
+----------------------------------------------------------------------
+User Attributes on this Feature:
+
+--- End of Report ---
+</pre><div></div></body></html>
